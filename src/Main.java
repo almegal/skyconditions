@@ -2,6 +2,7 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+        /*
         //task 1
         int age = 17;
         System.out.println("Если возраст человека равен " + age + "  то ");
@@ -82,6 +83,84 @@ public class Main {
             System.out.println("Число " + two + " большее");
         } else if (three > two && three > one) {
             System.out.println("Число " +  three + " большее");
+        }
+        */
+        // task 1, 2
+        int clientOS = 0;
+        final int iOS = 0;
+        final int Android = 1;
+
+        int clientDeviceYear = 2010;
+
+        boolean needLightVersion = clientDeviceYear < 2015;
+
+        if (clientOS == iOS && !needLightVersion) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == Android && !needLightVersion) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (clientOS == iOS && needLightVersion) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientOS == Android && needLightVersion) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }
+
+        // task 3
+        int year = 1900;
+
+        boolean isLeapYear =
+                (year >= 1584) &&
+                (year % 4 == 0) &&
+                (year % 100 != 0) ||
+                (year % 400 == 0) ?
+                true : false;
+
+        if (isLeapYear) {
+            System.out.println( year + " год является високосным");
+        } else {
+            System.out.println( year + " год не является високосным");
+        }
+
+
+        //task 4
+        int deliveryDistance = 95;
+        byte deliveryDays = 1;
+        if(deliveryDistance <=20) {
+            System.out.println("Потребуется дней: " + deliveryDays);
+        } else if (deliveryDistance > 20 && deliveryDistance <=60 ) {
+            deliveryDays += 1;
+            System.out.println("Потребуется дней: " + deliveryDays);
+        } else if (deliveryDistance > 60 && deliveryDistance < 100) {
+            deliveryDays += 2;
+            System.out.println("Потребуется дней: " + deliveryDays);
+        } else {
+            System.out.println("Доставки нет");
+        }
+
+        //task 5
+        byte monthNumber = 6;
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Зимний месяц");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весенний месяц");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Летний месяц");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осенний месяц");
+                break;
+            default:
+                System.out.println("Нет такого месяца");
         }
     }
 
