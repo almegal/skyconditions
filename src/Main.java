@@ -84,7 +84,7 @@ public class Main {
         } else if (three > two && three > one) {
             System.out.println("Число " +  three + " большее");
         }
-        */
+
         // task 1, 2
         int clientOS = 0;
         final int iOS = 0;
@@ -161,6 +161,75 @@ public class Main {
                 break;
             default:
                 System.out.println("Нет такого месяца");
+        }
+      */
+        // cicle homework
+        //task 1
+
+        for(int i =1; i <= 10; i++) {
+            System.out.println(i);
+        }
+
+        // task 2
+        for(int j = 10; j>=1; j--) {
+            System.out.println(j);
+        }
+
+        //task 3
+        for(int i = 0; i < 17; i+=2) {
+            System.out.println(i);
+        }
+        // task 4
+        for(int i = 10; i >=-10; i--) {
+            System.out.println(i);
+        }
+        // task 5
+        for(int i = 1904; i <= 2096; i+=4) {
+            System.out.println(i + " год является високосным");
+        }
+        //task 6
+        for(int i = 7; i <=98; i += 7) {
+            System.out.println(i);
+        }
+
+        //task 7
+        for(int i = 1; i <=512; i += i) {
+            System.out.println(i);
+        }
+
+        //task 8-9
+        int investMoney = 0;
+        for(int i = 1; i <=12; i++, investMoney = investMoney + investMoney/100) {
+            investMoney += 29000;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + investMoney + " рублей");
+        }
+
+        // task 10
+        for(int i = 1; i <=10; i++) {
+            System.out.println(i * 2);
+        }
+
+        // harder task 1
+
+        for(int i = 1; i<= 30; i++){
+            boolean isPing = i%3 == 0 ? true : false;
+            boolean isPong = i%5 == 0 ? true : false;
+
+            if(isPing && isPong){
+                System.out.println(i + ": ping pong");
+            } else if(isPong) {
+                System.out.println(i + ": pong");
+            } else if(isPing) {
+                System.out.println(i + ": ping");
+            }
+        }
+
+        // harder task 2
+
+        for(int i = 0, fbn1 = 0, fbn2 = 1, fb = 0 ;
+            i < 10;
+            i++, fb = fbn1 + fbn2, fbn1 = fbn2, fbn2 = fb ) {
+        System.out.print(fbn1 + " ");
         }
     }
 
